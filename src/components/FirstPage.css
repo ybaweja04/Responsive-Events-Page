@@ -1,0 +1,142 @@
+body {
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #333;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.first-page {
+  text-align: center;
+  padding: 20px;
+}
+/* Define keyframes for the fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Define keyframes for the text shine animation */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Apply the animations to the heading */
+.App h1 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  animation: fadeIn 2s ease-out, shine 2s ease-in-out infinite;
+  background: linear-gradient(90deg, #ffffff, #ffe6e6, #ffffff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+  border: 2px solid #000000; 
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  border-color: #d5d5d5; /* Blueish border on hover */
+  cursor: pointer;
+}
+
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date {
+  display: flex;
+  align-items: center;
+}
+
+.event-icon {
+  font-size: 24px;
+  color: #ff6347; 
+  margin-right: 10px;
+}
+
+.event-month-day {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-month {
+  font-size: 18px;
+  color: #ff6347; /* Customize as needed */
+}
+
+.event-day {
+  font-size: 24px;
+  color: #c8c8c8;
+}
+
+.event-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  font-size: 18px;
+  margin: 20px 0 0px;
+  color: white;
+}
+
+.event-description {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.load-more-button {
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.load-more-button:hover {
+  background: #00000034;
+}
